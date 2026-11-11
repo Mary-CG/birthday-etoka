@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#080808">
+
+    <title>A Visionary's Birthday Story </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- REALISTIC PAGE FLIP LIBRARY -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- GOLD PARTICLE BACKGROUND -->
+
+    <canvas id="particles"></canvas>
+
+
+    <!-- CINEMATIC OPENING SCREEN -->
+
+    <section class="cinematic-intro" id="cinematicIntro">
+
+        <div class="envelope-container" id="envelopeContainer">
+
+            <div class="envelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="envelope-letter">
+
+                    <span>THE MIND DOCTOR</span>
+
+                    <p>A little surprise awaits you...</p>
+
+                </div>
+
+                <div class="envelope-front"></div>
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-seal">♥</div>
+
+            </div>
+
+            <p class="envelope-caption">
+                A SPECIAL DELIVERY, JUST FOR YOU
+            </p>
+
+            <button id="openEnvelopeButton" onclick="openEnvelope()">
+
+                OPEN ENVELOPE ✨
+
+            </button>
+
+        </div>
+
+
+        <!-- WELCOME MESSAGE -->
+
+        <div class="welcome-message" id="welcomeMessage">
+
+            <span class="luxury-label">
+                A MOMENT JUST FOR YOU
+            </span>
+
+            <h1>
+                This one's for you.
+            </h1>
+
+            <div class="gold-line"></div>
+
+            <h2 id="cinematicName">
+                To this person I appreciate
+            </h2>
+
+            <p>
+                Every great story has a memorable beginning.
+
+                And today is a reminder of that beginning. Today is all about you.
+            </p>
+
+            <button onclick="openBook()">
+
+                OPEN YOUR BIRTHDAY BOOK ❤️
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BIRTHDAY BOOK -->
+
+    <section class="book-section" id="bookSection">
+
+        <div id="book">
+
+            <!-- PAGES WILL BE GENERATED AUTOMATICALLY BY JAVASCRIPT -->
+
+        </div>
+
+    </section>
+
+
+
+    <!-- BOOK NAVIGATION -->
+
+    <div class="navigation" id="navigation">
+
+        <button onclick="previousPage()">
+            ← PREVIOUS
+        </button>
+
+        <span id="pageCounter">
+            COVER
+        </span>
+
+        <button onclick="nextPage()">
+            NEXT →
+        </button>
+
+    </div>
+
+
+
+    <!-- BACKGROUND MUSIC -->
+
+    <audio id="backgroundMusic" loop preload="auto">
+
+        <source src="music/dr.aac" type="audio/aac">
+
+    </audio>
+
+
+    <button
+        class="music-button"
+        id="musicButton"
+        onclick="toggleMusic()">
+
+        ♫ MUSIC OFF
+
+    </button>
+
+
+
+    <!-- SECRET LETTER -->
+
+    <div id="secretModal" class="modal">
+
+    <div class="modal-content">
+
+        <button
+                class="close-button"
+                onclick="closeSecretLetter()">
+
+                ×
+
+            </button>
+
+            <span class="luxury-label">
+                Secret We Ignore
+            </span>
+
+        <h2>JUST FOR YOU</h2>
+
+        <div class="gold-line"></div>
+
+        <p id="secretMessage"></p>
+
+    </div>
+
+</div>
+
+
+
+    <!-- FINAL SURPRISE -->
+
+    <div class="modal" id="finalSurprise">
+
+        <div class="modal-content">
+
+            <button
+                class="close-button"
+                onclick="closeFinalSurprise()">
+
+                ×
+
+            </button>
+
+            <div class="cake">🎂</div>
+
+            <h1>Make A Wish!</h1>
+
+            <div class="gold-line"></div>
+
+            <p>
+                May every beautiful wish in your heart
+                find its way into reality.
+            </p>
+
+            <h2>HAPPY BIRTHDAY ❤️</h2>
+
+            <p class="signature">
+                Forever special. Forever celebrated.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
