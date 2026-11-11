@@ -422,10 +422,13 @@ button:hover {
 
     overflow: hidden;
 
+    box-sizing: border-box;
+
 }
 
 .page-content {
 
+    width: 100%;
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -438,7 +441,8 @@ button:hover {
     text-align: center;
     position: relative;
 
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 
 }
 
@@ -598,6 +602,10 @@ button:hover {
     border: 1px solid #c4a15b;
 
     box-shadow: 0 10px 30px #0003;
+
+    box-sizing: border-box;
+
+    flex-shrink: 1;
 
 }
 
@@ -1066,7 +1074,9 @@ button:hover {
 
     .photo-frame {
         height: 230px;
-        max-height: 45%;
+        width: 100%;
+        max-height: none;
+        flex-shrink: 0;
     }
 
     .photo-frame img {
